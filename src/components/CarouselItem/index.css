@@ -1,0 +1,20 @@
+.carousel-item {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-height: 40%;
+}
+.user-name {
+  font-size: 1.8em;
+}
+.company {
+  color: black;
+  font-size: 1em;
+}
+.description {
+  color: black;
+  font-size: 0.8em;
+}

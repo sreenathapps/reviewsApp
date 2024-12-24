@@ -1,1 +1,32 @@
 /* Write your code here */
+
+.carousel_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 2%;
+  width: 80%;
+}
+.bg-container {
+  background-image: url(https://assets.ccbp.in/frontend/react-js/reviews-bg.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding-top: 40px;
+  color: #ffffff;
+  font-size: 2em;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+}
+.carousel {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
