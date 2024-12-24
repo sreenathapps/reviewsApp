@@ -7,7 +7,7 @@ const CarouselItem = props => {
   return (
     <li className="carousel-item">
       <img className="icon" src={imgUrl} alt={username} />
-      <h1 className="user-name">{username}</h1>
+      <p className="user-name">{username}</p>
       <p className="company">{companyName}</p>
       <p className="description">{description}</p>
     </li>

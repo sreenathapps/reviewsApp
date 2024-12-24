@@ -25,8 +25,8 @@
   border: none;
 }
 .carousel {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

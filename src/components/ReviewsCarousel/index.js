@@ -11,21 +11,16 @@ class ReviewsCarousel extends Component {
   onClickRightButton = length => {
     this.setState(prevState => {
       let {currentIndex} = prevState
-      currentIndex += 1
-      if (currentIndex === length) {
-        currentIndex = 0
-      }
+      currentIndex =
+        currentIndex === length - 1 ? currentIndex : currentIndex + 1
       return {currentIndex}
     })
   }
 
-  onClickLeftButton = length => {
+  onClickLeftButton = () => {
     this.setState(prevState => {
       let {currentIndex} = prevState
-      currentIndex -= 1
-      if (currentIndex <= 0) {
-        currentIndex = length - 1
-      }
+      currentIndex = currentIndex === 0 ? currentIndex : currentIndex - 1
       return {currentIndex}
     })
   }
@@ -41,13 +36,14 @@ class ReviewsCarousel extends Component {
         <div className="carousel">
           <button
             className="btn"
+            data-testid="leftArrow"
             type="button"
-            onClick={this.onClickLeftButton.bind(this, reviewsList.length)}
+            onClick={this.onClickLeftButton}
           >
             <img
               className="arrow-icon"
               src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
-              alt="left-arrow"
+              alt="left arrow"
             />
           </button>
           <ul className="carousel_item">
@@ -56,12 +52,13 @@ class ReviewsCarousel extends Component {
           <button
             className="btn"
             type="button"
+            data-testid="rightArrow"
             onClick={this.onClickRightButton.bind(this, reviewsList.length)}
           >
             <img
               className="arrow-icon"
               src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
-              alt="right-arrow"
+              alt="right arrow"
             />
           </button>
         </div>
